@@ -8,6 +8,8 @@ Reglas para definir grupos de serialización en Symfony
 1. Todas las entidades tienen un grupo base, definido como `{nombre_de_la_entidad}_read`   
    * El grupo base estará en todas las propiedades __públicas__ que no sean relaciones
    (e.g. string, int, boolean, etc. ).
+   * *Propiedades públicas* hace referencia a las propiedades que quieran ser expuestas en el api, **no**
+   a que hayan sido declaradas como públicas. 
 
 1. Por cada propiedad que contenga una relación, se definirá un grupo de serialización nuevo
 con el nombre `{nombre_de_la_entidad}_read_{nombre_de_la_propiedad}`
